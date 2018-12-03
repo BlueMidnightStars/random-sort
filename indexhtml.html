@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    {
+    let arr = [5,4,3,2,1];
+    // console.log(arr)
+    // for (let i = 0; i < arr.length - 1; i++) {
+    //     let index = i;
+    //     let tmp = arr[i];
+    //     console.log(arr)
+    //     for (let j = i + 1; j < arr.length; j ++) {
+    //         if(arr[j] < tmp){
+    //             console.log(arr[j],tmp);
+    //             index = j;
+    //             console.log(index);
+    //         }
+    //         arr[i] = arr[index];
+    //         arr[index] = tmp
+    //         console.log(arr)
+    //     }
+
+        
+    // }
+    for (var i = 0; i < arr.length - 1; i++) {
+        console.log(i)
+        let tmp = arr[i];
+        let replace = arr[i];
+        let index = i;
+        for (var j = i + 1; j < arr.length; j++) {
+            console.log(j)
+            if (replace > arr[j]) {
+                replace = arr[j];
+                index = j;
+            }
+        }
+        arr[i] = replace;
+        arr[index] = tmp
+    }
+    console.log(arr);
+
+}
+</script>
+</body>
+</html>
